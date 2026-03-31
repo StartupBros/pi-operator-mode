@@ -1,0 +1,55 @@
+{
+  "name": "@startupbros/pi-operator-mode",
+  "version": "0.1.0",
+  "description": "Operator-mode recovery for execution-like Pi prompts.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "pi-coding-agent",
+    "operator-mode",
+    "execution",
+    "retry"
+  ],
+  "type": "module",
+  "files": [
+    "extensions/",
+    "src/",
+    "test/",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/**/*.test.ts",
+    "check": "pnpm typecheck && pnpm test"
+  },
+  "packageManager": "pnpm@10.26.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.60.0",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartupBros/pi-operator-mode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StartupBros/pi-operator-mode/issues"
+  },
+  "homepage": "https://github.com/StartupBros/pi-operator-mode#readme",
+  "author": "StartupBros",
+  "license": "MIT"
+}
